@@ -157,7 +157,7 @@ document.getElementById(element).style.cursor = "default";
 document.getElementById(element).setAttribute("onclick",";");
 
 ile_skuch++;
-var obraz="img/s"+ile_skuch+".jpg";
+var obraz="img/s"+ile_skuch+".png";
 document.getElementById("szubienica").innerHTML='<img src="'+obraz+'" alt=""/>'
 }
 if(haslo==haslo1)
