@@ -1,6 +1,7 @@
 
 
 var haslo = "Kocham moją wiewiórkę";
+var kategoria = "Przysłowie";
 
 var dlugosc= haslo.length;
 var ile_skuch=0;
@@ -24,6 +25,7 @@ haslo = haslo.toUpperCase();
 function wypisz_haslo() 
 {
 	
+	document.getElementById("category").innerHTML = "Kategoria :" + "<br>" + kategoria;
 	document.getElementById("plansza").innerHTML = haslo1;
 	
 }	
