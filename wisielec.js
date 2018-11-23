@@ -1,6 +1,5 @@
 
-
-var haslo = "Kocham moją wiewiórkę";
+var haslo = "Java";
 var kategoria = '<span class = "cate">Przysłowie</span>';
 
 
@@ -11,6 +10,7 @@ var ile_skuch=0;
 var yes=new Audio("yes.wav");
 var no=new Audio("no.wav");
 var haslo1="";
+
 
 
 for (i=0; i<dlugosc;i++)
@@ -71,6 +71,10 @@ litery[31] = "Y";
 litery[32] = "Z";
 litery[33] = "Ż";
 litery[34] = "Ź";
+
+
+
+
 
 
 function start() 
@@ -171,3 +175,30 @@ if (ile_skuch>=9)
 document.getElementById("alfabet").innerHTML="Przegrana ! Prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
 
 }
+
+/*czas*/
+
+(function(){
+  var counter = 10;
+  var czas = document.getElementById("czas");
+  setInterval(function() {
+    counter--;
+    if (counter >= 0) {
+      span = document.getElementById("count");
+      span.innerHTML = counter;
+
+    }
+    // Display 'counter' wherever you want to display it.
+    if (counter === 0) {
+    	document.getElementById("alfabet").innerHTML="Przegrana ! Prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
+    		document.getElementById("czas").innerHTML = "";
+
+    //    alert('this is where it happens');
+        clearInterval(counter);
+    }
+
+  }, 1000);
+
+})();
+/*konie czasu*/
+
