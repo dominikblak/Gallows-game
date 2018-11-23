@@ -1,7 +1,8 @@
 
 
 var haslo = "Kocham moją wiewiórkę";
-var kategoria = "Przysłowie";
+var kategoria = '<span class = "cate">Przysłowie</span>';
+
 
 var dlugosc= haslo.length;
 var ile_skuch=0;
