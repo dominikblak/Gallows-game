@@ -1,6 +1,6 @@
 
 
-var haslo = "Java";
+var haslo = "Co wolno adminowi, to nie użytkownikowi";
 var kategoria = '<span class = "cate">Przysłowie</span>';
 var czas = document.getElementById("czas");
 
