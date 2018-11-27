@@ -1,7 +1,8 @@
 
+
 var haslo = "Java";
 var kategoria = '<span class = "cate">Przysłowie</span>';
-
+var czas = document.getElementById("czas");
 
 var dlugosc= haslo.length;
 var ile_skuch=0;
@@ -113,6 +114,8 @@ if(miejsce>this.length-1) return this.toString();
 else return this.substr(0,miejsce)+znak+this.substr(miejsce+1);
 }
 
+
+
 function sprawdz(nr)
 {
 
@@ -170,35 +173,32 @@ document.getElementById("szubienica").innerHTML='<img src="'+obraz+'" alt=""/>'
 if(haslo==haslo1)
 
 document.getElementById("alfabet").innerHTML="Tak jest ! Podano prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
+  
 
 if (ile_skuch>=9) 
 document.getElementById("alfabet").innerHTML="Przegrana ! Prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
+ 
 
 }
 
-/*czas*/
+var timeleft = 60;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    if(haslo==haslo1)
+    	clearInterval(downloadTimer);
+    if (ile_skuch>=9) 
+    	clearInterval(downloadTimer);
+   if(timeleft === 0)
+   document.getElementById("alfabet").innerHTML="Koniec czasu ! Prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
+  if(timeleft === 0)
+   document.getElementById("timer").innerHTML="<p id=tim>Koniec czasu ! </p>" ;
+ 
 
-(function(){
-  var counter = 10;
-  var czas = document.getElementById("czas");
-  setInterval(function() {
-    counter--;
-    if (counter >= 0) {
-      span = document.getElementById("count");
-      span.innerHTML = counter;
+    },1000);
 
-    }
-    // Display 'counter' wherever you want to display it.
-    if (counter === 0) {
-    	document.getElementById("alfabet").innerHTML="Przegrana ! Prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
-    		document.getElementById("czas").innerHTML = "";
 
-    //    alert('this is where it happens');
-        clearInterval(counter);
-    }
 
-  }, 1000);
-
-})();
-/*konie czasu*/
 
