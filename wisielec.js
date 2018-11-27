@@ -9,7 +9,7 @@ var ile_skuch=0;
 
 
 var yes=new Audio("yes.wav");
-var no=new Audio("no.wav");
+var no=new Audio("no.mp3");
 var winner=new Audio("winner.mp3")
 var fail =new Audio("fail.mp3")
 var haslo1="";
