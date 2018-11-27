@@ -1,6 +1,6 @@
 
 
-var haslo = "Co wolno adminowi, to nie użytkownikowi";
+var haslo = "This is JavaScript";
 var kategoria = '<span class = "cate">Przysłowie</span>';
 var czas = document.getElementById("czas");
 
