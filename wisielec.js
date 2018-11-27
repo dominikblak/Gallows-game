@@ -10,6 +10,8 @@ var ile_skuch=0;
 
 var yes=new Audio("yes.wav");
 var no=new Audio("no.wav");
+var winner=new Audio("winner.mp3")
+var fail =new Audio("fail.mp3")
 var haslo1="";
 
 
@@ -173,11 +175,18 @@ document.getElementById("szubienica").innerHTML='<img src="'+obraz+'" alt=""/>'
 if(haslo==haslo1)
 
 document.getElementById("alfabet").innerHTML="Tak jest ! Podano prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
+
+if(haslo==haslo1)
+
+winner.play();
+
   
 
 if (ile_skuch>=9) 
 document.getElementById("alfabet").innerHTML="Przegrana ! Prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
- 
+if (ile_skuch>=9) 
+
+ fail.play();
 
 }
 
@@ -195,8 +204,8 @@ var timeleft = 60;
    document.getElementById("alfabet").innerHTML="Koniec czasu ! Prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
   if(timeleft === 0)
    document.getElementById("timer").innerHTML="<p id=tim>Koniec czasu ! </p>" ;
- 
-
+ if(timeleft === 0)
+ 	 fail.play();
     },1000);
 
 
