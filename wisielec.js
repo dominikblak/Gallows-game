@@ -5,7 +5,7 @@ var kategoria = '<span class = "cate">Przysłowie</span>';
 var czas = document.getElementById("czas");
 
 var dlugosc= haslo.length;
-var ile_skuch=0;
+var ile_bled=0;
 
 
 var yes=new Audio("yes.wav");
@@ -26,7 +26,7 @@ for (i=0; i<dlugosc;i++)
 
 haslo = haslo.toUpperCase();
 
-function wypisz_haslo() 
+function show_password() 
 {
 	
 	document.getElementById("category").innerHTML = "Kategoria :" + "<br>" + kategoria;
@@ -102,12 +102,12 @@ if ((i+1) %7==0) tresc_diva=tresc_diva +'<div style="clear:both;"></div>'
 
 document.getElementById("alfabet").innerHTML=tresc_diva;
 
-wypisz_haslo();
+show_password();
 }
 
 
 
-String.prototype.ustawZnak=function(miejsce,znak)
+String.prototype.setSign=function(miejsce,znak)
 
 
 {
@@ -132,7 +132,7 @@ for (i=0; i<dlugosc;i++)
 	if (haslo.charAt(i)==litery[nr])
 	{
 		
-		haslo1=haslo1.ustawZnak(i,litery[nr]);
+		haslo1=haslo1.setSign(i,litery[nr]);
 		trafiona=true;
 	}
 }	
@@ -152,7 +152,7 @@ var element = "lit"+ nr;
 
 
 
-wypisz_haslo();
+show_password();
 }
 else
 {
@@ -168,8 +168,8 @@ document.getElementById(element).style.cursor = "default";
 
 document.getElementById(element).setAttribute("onclick",";");
 
-ile_skuch++;
-var obraz="img/s"+ile_skuch+".png";
+ile_bled++;
+var obraz="img/s"+ile_bled+".png";
 document.getElementById("szubienica").innerHTML='<img src="'+obraz+'" alt=""/>'
 }
 if(haslo==haslo1)
@@ -182,9 +182,9 @@ winner.play();
 
   
 
-if (ile_skuch>=9) 
+if (ile_bled>=9) 
 document.getElementById("alfabet").innerHTML="Przegrana ! Prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
-if (ile_skuch>=9) 
+if (ile_bled>=9) 
 
  fail.play();
 
@@ -198,7 +198,7 @@ var timeleft = 60;
         clearInterval(downloadTimer);
     if(haslo==haslo1)
     	clearInterval(downloadTimer);
-    if (ile_skuch>=9) 
+    if (ile_bled>=9) 
     	clearInterval(downloadTimer);
    if(timeleft === 0)
    document.getElementById("alfabet").innerHTML="Koniec czasu ! Prawidłowe hasło: " +haslo+'<br/><br/><span class="reset" onclick="location.reload()">JESZCZE RAZ ?</span>';
