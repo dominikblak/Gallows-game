@@ -4,3 +4,5 @@ Technologies used in the project:<br>
 -HTML<br>
 -CSS<br>
 -JAVASCRIPT<br>
+## Demo
+[Gallows](https://dominikblak.github.io/Gallows/Wisielec.html)
