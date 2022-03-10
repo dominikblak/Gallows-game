@@ -10,9 +10,8 @@ Gallows game - is a browser version of the school game on a piece of paper. Gues
 
 ### 🚀 Demo :
 [Gallows](https://dominikblak.github.io/Gallows/Wisielec.html)
-</br></br>
 
-#### 🧰 Technology
+#### 🧰 Technology :
 -HTML<br>
 -CSS<br>
 -JAVASCRIPT<br>
