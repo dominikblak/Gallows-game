@@ -4,7 +4,7 @@
 Dominik Blak : <a href="https://github.com/dominikblak">GitHub</a>
 
 ## 🚀 Demo :
-[Gallows](https://dominikblak.github.io/Gallows/Wisielec.html)
+[Gallows](https://dominikblak.github.io/Gallows-game/Wisielec.html)
 
 ### 📖 Description :
 
